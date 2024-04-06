@@ -14,6 +14,7 @@ class ConfessionScreen extends HookConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title:Text(title),
+        backgroundColor: Theme.of(context).primaryColor,
     ),
       body: Center(
         child: Column(

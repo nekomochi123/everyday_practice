@@ -12,6 +12,7 @@ class HappyUnHappyScreen extends HookConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Happy or UnHappy'),
+        backgroundColor: Theme.of(context).primaryColor,
       ),
       body: Center(
         child: Column(
