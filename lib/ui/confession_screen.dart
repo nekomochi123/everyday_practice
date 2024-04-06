@@ -1,29 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:everyday_practice/domain/happy_unhappy_viewmodel.dart';
 
-class HappyUnHappyScreen extends HookConsumerWidget {
-  const HappyUnHappyScreen({super.key});
+
+class ConfessionScreen extends HookConsumerWidget {
+  const ConfessionScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final title = ref.watch(HappyProvider.notifier).title;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Happy or UnHappy'),
-      ),
+        title:Text(title),
+    ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Radio(value: 0,
-                    groupValue:null,
-                    onChanged: null),
+                Radio(
+                  value: 1,
+                  groupValue: luck_value,
+                  onChanged: (value) {
+                    ref.read(HappyProvider.notifier).update_happy(value!);
+                  },
+                ),
                 Text('幸せ'),
-                Radio(value: 1,
-                    groupValue:null,
-                    onChanged: null),
+                Radio(
+                  value: 2,
+                  groupValue: luck_value,
+                  onChanged: (value) {
+                    ref.read(HappyProvider.notifier).update_happy(value!);
+                  },
+                ),
                 Text('不幸'),
               ],
             ),
@@ -35,7 +46,10 @@ class HappyUnHappyScreen extends HookConsumerWidget {
                   backgroundColor: Colors.deepOrangeAccent,
                 ),
                 child: const Text('next'),
-                onPressed: () {},
+                onPressed: luck_value != 0 ? () {Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ConfessionScreen()),
+                );} : null,
               ),
             ),
           ],

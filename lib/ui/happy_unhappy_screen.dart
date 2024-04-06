@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:everyday_practice/domain/happy_unhappy_viewmodel.dart';
+import 'package:everyday_practice/ui/confession_screen.dart';
 
 class HappyUnHappyScreen extends HookConsumerWidget {
   const HappyUnHappyScreen({super.key});
@@ -46,7 +46,10 @@ class HappyUnHappyScreen extends HookConsumerWidget {
                   backgroundColor: Colors.deepOrangeAccent,
                 ),
                 child: const Text('next'),
-                onPressed: () {},
+                onPressed: luck_value != 0 ? () {Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ConfessionScreen()),
+                );} : null,
               ),
             ),
           ],
