@@ -8,8 +8,7 @@ class HappyUnHappyScreen extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final radio_happy = ref.watch(happyProvider);
-    final radio_unhappy = ref.watch(unhappyProvider);
+    final luck_value = ref.watch(HappyProvider);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Happy or UnHappy'),
@@ -18,16 +17,24 @@ class HappyUnHappyScreen extends HookConsumerWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Radio(value: 0,
-                    groupValue:null,
-                    onChanged: null),
+                Radio(
+                  value: 1,
+                  groupValue: luck_value,
+                  onChanged: (value) {
+                    ref.read(HappyProvider.notifier).update_happy(value!);
+                  },
+                ),
                 Text('幸せ'),
-                Radio(value: 1,
-                    groupValue:null,
-                    onChanged: null),
+                Radio(
+                  value: 2,
+                  groupValue: luck_value,
+                  onChanged: (value) {
+                    ref.read(HappyProvider.notifier).update_happy(value!);
+                  },
+                ),
                 Text('不幸'),
               ],
             ),
