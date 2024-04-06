@@ -1,7 +1,7 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class RadioNotifier extends StateNotifier<int> {
-  RadioNotifier() : super(0);
+class HappyRadioNotifier extends StateNotifier<int> {
+  HappyRadioNotifier() : super(0);
 
   String get title {
     if (state == 1) {
@@ -10,10 +10,9 @@ class RadioNotifier extends StateNotifier<int> {
       return '不幸';
     }
   }
-
   void update_happy(int value) {
     state = value;
   }
 }
 
-final HappyProvider = StateNotifierProvider<RadioNotifier, int>((ref) => RadioNotifier());
+final HappyProvider = StateNotifierProvider<HappyRadioNotifier, int>((ref) => HappyRadioNotifier());
