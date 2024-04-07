@@ -1,50 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-
-class HappinessScreen extends HookConsumerWidget {
-  const HappinessScreen({super.key});
-
+class HappinessCheckScreen extends HookConsumerWidget {
+  const HappinessCheckScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Are you happy?'),
-        ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text('あなたは幸せですか？不幸ですか？'),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Radio(
-                  value: 1,
-                  groupValue: null,
-                  onChanged: (value) {
-                  },
-                ),
-                Text('幸せ'),
-                Radio(
-                  value: 2,
-                  groupValue: null,
-                  onChanged: (value) {
-                  },
-                ),
-                Text('不幸'),
-              ],
-            ),
-            Align(
-                alignment: Alignment.bottomCenter,
-                child: ElevatedButton(
-                  onPressed: () {
-                  },
-                  child: const Text('選択'),
-                )
-            ),
-          ],
-        )
+      appBar: AppBar(
+        title: const Text('Are you happy?'),
+      ),
+      // body: ListView.builder(
+      //   itemCount: sampleList.length,
+      //   itemBuilder: (_, index) {
+      //     final sampleItem = sampleList[index];
+      //     return RadioListTile(
+      //       title: Text(sampleItem),
+      //       value: index,
+      //       groupValue: selectedIndex.value,
+      //       onChanged: (int? value) {
+      //         selectedIndex.value = index;
+      //       },
+      //     );
+      //   },
+      // ),
     );
   }
 }
