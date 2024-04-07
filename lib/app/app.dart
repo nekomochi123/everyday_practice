@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:everyday_practice/ui/hapiness/happiness_screen.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:everyday_practice/foundation/router.dart';
 
-class MyApp extends StatelessWidget {
+class MyApp extends HookConsumerWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  Widget build(BuildContext context, WidgetRef ref) {
+    final router = ref.read(routerProvider);
+    return MaterialApp.router(
+      routeInformationProvider: router.routeInformationProvider,
+      routeInformationParser: router.routeInformationParser,
+      routerDelegate: router.routerDelegate,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HappinessScreen(),
     );
   }
 }
