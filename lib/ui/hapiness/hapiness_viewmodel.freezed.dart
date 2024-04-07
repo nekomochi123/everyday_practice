@@ -19,22 +19,18 @@ mixin _$HappinessData {
   HappinessKind? get happiness => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $HappinessDataCopyWith<HappinessData> get copyWith =>
-      throw _privateConstructorUsedError;
+  $HappinessDataCopyWith<HappinessData> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $HappinessDataCopyWith<$Res> {
-  factory $HappinessDataCopyWith(
-          HappinessData value, $Res Function(HappinessData) then) =
-      _$HappinessDataCopyWithImpl<$Res, HappinessData>;
+  factory $HappinessDataCopyWith(HappinessData value, $Res Function(HappinessData) then) = _$HappinessDataCopyWithImpl<$Res, HappinessData>;
   @useResult
   $Res call({HappinessKind? happiness});
 }
 
 /// @nodoc
-class _$HappinessDataCopyWithImpl<$Res, $Val extends HappinessData>
-    implements $HappinessDataCopyWith<$Res> {
+class _$HappinessDataCopyWithImpl<$Res, $Val extends HappinessData> implements $HappinessDataCopyWith<$Res> {
   _$HappinessDataCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -57,23 +53,16 @@ class _$HappinessDataCopyWithImpl<$Res, $Val extends HappinessData>
 }
 
 /// @nodoc
-abstract class _$$HappinessDataImplCopyWith<$Res>
-    implements $HappinessDataCopyWith<$Res> {
-  factory _$$HappinessDataImplCopyWith(
-          _$HappinessDataImpl value, $Res Function(_$HappinessDataImpl) then) =
-      __$$HappinessDataImplCopyWithImpl<$Res>;
+abstract class _$$HappinessDataImplCopyWith<$Res> implements $HappinessDataCopyWith<$Res> {
+  factory _$$HappinessDataImplCopyWith(_$HappinessDataImpl value, $Res Function(_$HappinessDataImpl) then) = __$$HappinessDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({HappinessKind? happiness});
 }
 
 /// @nodoc
-class __$$HappinessDataImplCopyWithImpl<$Res>
-    extends _$HappinessDataCopyWithImpl<$Res, _$HappinessDataImpl>
-    implements _$$HappinessDataImplCopyWith<$Res> {
-  __$$HappinessDataImplCopyWithImpl(
-      _$HappinessDataImpl _value, $Res Function(_$HappinessDataImpl) _then)
-      : super(_value, _then);
+class __$$HappinessDataImplCopyWithImpl<$Res> extends _$HappinessDataCopyWithImpl<$Res, _$HappinessDataImpl> implements _$$HappinessDataImplCopyWith<$Res> {
+  __$$HappinessDataImplCopyWithImpl(_$HappinessDataImpl _value, $Res Function(_$HappinessDataImpl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -105,11 +94,7 @@ class _$HappinessDataImpl implements _HappinessData {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$HappinessDataImpl &&
-            (identical(other.happiness, happiness) ||
-                other.happiness == happiness));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$HappinessDataImpl && (identical(other.happiness, happiness) || other.happiness == happiness));
   }
 
   @override
@@ -118,18 +103,15 @@ class _$HappinessDataImpl implements _HappinessData {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$HappinessDataImplCopyWith<_$HappinessDataImpl> get copyWith =>
-      __$$HappinessDataImplCopyWithImpl<_$HappinessDataImpl>(this, _$identity);
+  _$$HappinessDataImplCopyWith<_$HappinessDataImpl> get copyWith => __$$HappinessDataImplCopyWithImpl<_$HappinessDataImpl>(this, _$identity);
 }
 
 abstract class _HappinessData implements HappinessData {
-  const factory _HappinessData({final HappinessKind? happiness}) =
-      _$HappinessDataImpl;
+  const factory _HappinessData({final HappinessKind? happiness}) = _$HappinessDataImpl;
 
   @override
   HappinessKind? get happiness;
   @override
   @JsonKey(ignore: true)
-  _$$HappinessDataImplCopyWith<_$HappinessDataImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$HappinessDataImplCopyWith<_$HappinessDataImpl> get copyWith => throw _privateConstructorUsedError;
 }

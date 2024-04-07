@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:everyday_practice/ui/hapiness/happiness_screen.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:everyday_practice/app/router.dart';
 
