@@ -12,6 +12,8 @@ dependencies:
     sdk: flutter
   flutter_hooks:
   freezed_annotation:
+  flutter_localizations:
+    sdk: flutter
   go_router:
   gap:
   hooks_riverpod:
