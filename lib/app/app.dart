@@ -1,0 +1,33 @@
+import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+
+
+class MyApp extends HookConsumerWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      routeInformationProvider: router.routeInformationProvider,
+      routeInformationParser: router.routeInformationParser,
+      routerDelegate: router.routerDelegate,
+      supportedLocales: const[
+        Locale('ja', ''),
+        Locale('en', ''),
+      ],
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      builder: (context, child){
+        return Stack(
+          children: [
+            child ?? const SizedBox.shrink(),
+          ],
+        );
+      },
+    );
+  }
+}
