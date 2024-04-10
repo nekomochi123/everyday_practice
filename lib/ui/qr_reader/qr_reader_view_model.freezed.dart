@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$QRReaderViewModelState {
-  Barcode? get myBarcode => throw _privateConstructorUsedError;
+  BarcodeCapture? get myBarcode => throw _privateConstructorUsedError;
   String get scannedValue => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -30,7 +30,7 @@ abstract class $QRReaderViewModelStateCopyWith<$Res> {
           $Res Function(QRReaderViewModelState) then) =
       _$QRReaderViewModelStateCopyWithImpl<$Res, QRReaderViewModelState>;
   @useResult
-  $Res call({Barcode? myBarcode, String scannedValue});
+  $Res call({BarcodeCapture? myBarcode, String scannedValue});
 }
 
 /// @nodoc
@@ -54,7 +54,7 @@ class _$QRReaderViewModelStateCopyWithImpl<$Res,
       myBarcode: freezed == myBarcode
           ? _value.myBarcode
           : myBarcode // ignore: cast_nullable_to_non_nullable
-              as Barcode?,
+              as BarcodeCapture?,
       scannedValue: null == scannedValue
           ? _value.scannedValue
           : scannedValue // ignore: cast_nullable_to_non_nullable
@@ -72,7 +72,7 @@ abstract class _$$QRReaderViewModelStateImplCopyWith<$Res>
       __$$QRReaderViewModelStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Barcode? myBarcode, String scannedValue});
+  $Res call({BarcodeCapture? myBarcode, String scannedValue});
 }
 
 /// @nodoc
@@ -95,7 +95,7 @@ class __$$QRReaderViewModelStateImplCopyWithImpl<$Res>
       myBarcode: freezed == myBarcode
           ? _value.myBarcode
           : myBarcode // ignore: cast_nullable_to_non_nullable
-              as Barcode?,
+              as BarcodeCapture?,
       scannedValue: null == scannedValue
           ? _value.scannedValue
           : scannedValue // ignore: cast_nullable_to_non_nullable
@@ -112,7 +112,7 @@ class _$QRReaderViewModelStateImpl implements _QRReaderViewModelState {
 
   @override
   @JsonKey()
-  final Barcode? myBarcode;
+  final BarcodeCapture? myBarcode;
   @override
   @JsonKey()
   final String scannedValue;
@@ -146,11 +146,11 @@ class _$QRReaderViewModelStateImpl implements _QRReaderViewModelState {
 
 abstract class _QRReaderViewModelState implements QRReaderViewModelState {
   const factory _QRReaderViewModelState(
-      {final Barcode? myBarcode,
+      {final BarcodeCapture? myBarcode,
       final String scannedValue}) = _$QRReaderViewModelStateImpl;
 
   @override
-  Barcode? get myBarcode;
+  BarcodeCapture? get myBarcode;
   @override
   String get scannedValue;
   @override

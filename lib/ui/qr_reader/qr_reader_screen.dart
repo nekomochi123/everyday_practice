@@ -14,7 +14,6 @@ class QRReaderScreen extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final qrValue = ref.watch(qrReaderViewModelProvider.select((v) => v.scannedValue));
     return Scaffold(
         appBar: AppBar(
           title: const Text(
@@ -32,14 +31,14 @@ class QRReaderScreen extends HookConsumerWidget {
                     detectionSpeed:
                     DetectionSpeed.noDuplicates,
                   ),
-                  onDetect: (BarcodeCapture capture) {
-                    ref.read(qrReaderViewModelProvider.notifier).getQRCode(capture as Barcode?);
+                  onDetect: (capture) {
+                    ref.read(qrReaderViewModelProvider.notifier).getQRCode(capture);
                   },
                 ),
               ),
-              Text(
-                qrValue == '' ? 'QR コードをスキャンしてください。' : 'QRコードを検知しました。',
-                style: const TextStyle(fontSize: 15),
+              const Text(
+                'QR コードをスキャンしてください',
+                style:TextStyle(fontSize: 15),
               ),
             ],
           ),
