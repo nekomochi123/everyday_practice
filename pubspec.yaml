@@ -16,6 +16,7 @@ dependencies:
   gap:
   hooks_riverpod:
   cupertino_icons:
+  mobile_scanner:
 
 dev_dependencies:
   build_runner:

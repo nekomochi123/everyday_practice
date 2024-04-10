@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-
-
+import 'package:everyday_practice/app/router.dart';
 
 class MyApp extends HookConsumerWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return MaterialApp(
+    final router = ref.watch(routerProvider);
+    return MaterialApp.router(
       title: 'Flutter Demo',
       routeInformationProvider: router.routeInformationProvider,
       routeInformationParser: router.routeInformationParser,
