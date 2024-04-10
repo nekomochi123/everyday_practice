@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-
-
+import 'package:everyday_practice/ui/qr_reader/qr_reader_view_model.dart';
 
 class QRHomeScreen extends HookConsumerWidget {
   const QRHomeScreen({
@@ -19,7 +19,13 @@ class QRHomeScreen extends HookConsumerWidget {
           'QRコードリーダー',
         ),
       ),
-      body:null
+      body:Center(child: ElevatedButton(
+        onPressed: () {
+          ref.read(qrReaderViewModelProvider.notifier).goNext();
+          },
+        child: const Text('QRコードリーダーを開始'),
+      ),
+      ),
     );
   }
 }
