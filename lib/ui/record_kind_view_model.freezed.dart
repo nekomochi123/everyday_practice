@@ -22,6 +22,7 @@ RecordKindState _$RecordKindStateFromJson(Map<String, dynamic> json) {
 mixin _$RecordKindState {
   List<RecordKind> get recordKinds => throw _privateConstructorUsedError;
   List<String> get records => throw _privateConstructorUsedError;
+  String get selectedRecordKind => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +36,10 @@ abstract class $RecordKindStateCopyWith<$Res> {
           RecordKindState value, $Res Function(RecordKindState) then) =
       _$RecordKindStateCopyWithImpl<$Res, RecordKindState>;
   @useResult
-  $Res call({List<RecordKind> recordKinds, List<String> records});
+  $Res call(
+      {List<RecordKind> recordKinds,
+      List<String> records,
+      String selectedRecordKind});
 }
 
 /// @nodoc
@@ -53,6 +57,7 @@ class _$RecordKindStateCopyWithImpl<$Res, $Val extends RecordKindState>
   $Res call({
     Object? recordKinds = null,
     Object? records = null,
+    Object? selectedRecordKind = null,
   }) {
     return _then(_value.copyWith(
       recordKinds: null == recordKinds
@@ -63,6 +68,10 @@ class _$RecordKindStateCopyWithImpl<$Res, $Val extends RecordKindState>
           ? _value.records
           : records // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      selectedRecordKind: null == selectedRecordKind
+          ? _value.selectedRecordKind
+          : selectedRecordKind // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -75,7 +84,10 @@ abstract class _$$RecordKindStateImplCopyWith<$Res>
       __$$RecordKindStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<RecordKind> recordKinds, List<String> records});
+  $Res call(
+      {List<RecordKind> recordKinds,
+      List<String> records,
+      String selectedRecordKind});
 }
 
 /// @nodoc
@@ -91,6 +103,7 @@ class __$$RecordKindStateImplCopyWithImpl<$Res>
   $Res call({
     Object? recordKinds = null,
     Object? records = null,
+    Object? selectedRecordKind = null,
   }) {
     return _then(_$RecordKindStateImpl(
       recordKinds: null == recordKinds
@@ -101,6 +114,10 @@ class __$$RecordKindStateImplCopyWithImpl<$Res>
           ? _value._records
           : records // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      selectedRecordKind: null == selectedRecordKind
+          ? _value.selectedRecordKind
+          : selectedRecordKind // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -112,7 +129,8 @@ class _$RecordKindStateImpl
     implements _RecordKindState {
   const _$RecordKindStateImpl(
       {required final List<RecordKind> recordKinds,
-      required final List<String> records})
+      required final List<String> records,
+      required this.selectedRecordKind})
       : _recordKinds = recordKinds,
         _records = records;
 
@@ -136,8 +154,11 @@ class _$RecordKindStateImpl
   }
 
   @override
+  final String selectedRecordKind;
+
+  @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'RecordKindState(recordKinds: $recordKinds, records: $records)';
+    return 'RecordKindState(recordKinds: $recordKinds, records: $records, selectedRecordKind: $selectedRecordKind)';
   }
 
   @override
@@ -146,7 +167,8 @@ class _$RecordKindStateImpl
     properties
       ..add(DiagnosticsProperty('type', 'RecordKindState'))
       ..add(DiagnosticsProperty('recordKinds', recordKinds))
-      ..add(DiagnosticsProperty('records', records));
+      ..add(DiagnosticsProperty('records', records))
+      ..add(DiagnosticsProperty('selectedRecordKind', selectedRecordKind));
   }
 
   @override
@@ -156,7 +178,9 @@ class _$RecordKindStateImpl
             other is _$RecordKindStateImpl &&
             const DeepCollectionEquality()
                 .equals(other._recordKinds, _recordKinds) &&
-            const DeepCollectionEquality().equals(other._records, _records));
+            const DeepCollectionEquality().equals(other._records, _records) &&
+            (identical(other.selectedRecordKind, selectedRecordKind) ||
+                other.selectedRecordKind == selectedRecordKind));
   }
 
   @JsonKey(ignore: true)
@@ -164,7 +188,8 @@ class _$RecordKindStateImpl
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(_recordKinds),
-      const DeepCollectionEquality().hash(_records));
+      const DeepCollectionEquality().hash(_records),
+      selectedRecordKind);
 
   @JsonKey(ignore: true)
   @override
@@ -184,7 +209,8 @@ class _$RecordKindStateImpl
 abstract class _RecordKindState implements RecordKindState {
   const factory _RecordKindState(
       {required final List<RecordKind> recordKinds,
-      required final List<String> records}) = _$RecordKindStateImpl;
+      required final List<String> records,
+      required final String selectedRecordKind}) = _$RecordKindStateImpl;
 
   factory _RecordKindState.fromJson(Map<String, dynamic> json) =
       _$RecordKindStateImpl.fromJson;
@@ -193,6 +219,8 @@ abstract class _RecordKindState implements RecordKindState {
   List<RecordKind> get recordKinds;
   @override
   List<String> get records;
+  @override
+  String get selectedRecordKind;
   @override
   @JsonKey(ignore: true)
   _$$RecordKindStateImplCopyWith<_$RecordKindStateImpl> get copyWith =>

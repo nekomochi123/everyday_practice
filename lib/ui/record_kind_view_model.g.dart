@@ -14,6 +14,7 @@ _$RecordKindStateImpl _$$RecordKindStateImplFromJson(
           .toList(),
       records:
           (json['records'] as List<dynamic>).map((e) => e as String).toList(),
+      selectedRecordKind: json['selectedRecordKind'] as String,
     );
 
 Map<String, dynamic> _$$RecordKindStateImplToJson(
@@ -21,4 +22,5 @@ Map<String, dynamic> _$$RecordKindStateImplToJson(
     <String, dynamic>{
       'recordKinds': instance.recordKinds,
       'records': instance.records,
+      'selectedRecordKind': instance.selectedRecordKind,
     };

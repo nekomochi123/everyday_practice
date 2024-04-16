@@ -16,8 +16,8 @@ class RecordKindScreen extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final recordKindsState = ref.watch(recordKindStateProvider.select((v) => v.recordKinds));
-    final records = ref.watch(recordKindStateProvider.select((v) => v.records));
-
+    final selectedRecordKind = useState(recordKindsState.isNotEmpty ? recordKindsState[0].recordKind : null);
+    final filteredRecords = recordKindsState.where((record) => record.recordKind == selectedRecordKind).toList();
     useEffect(() {
       ref.read(recordKindStateProvider.notifier).loadRecord();
       return null;
@@ -28,21 +28,38 @@ class RecordKindScreen extends HookConsumerWidget {
           'フィルタ付き一覧表示',
         ),
       ),
-      body: ListView.separated(
-        itemCount: records.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(
-              '${recordKindsState[index].title}(${recordKindsState[index].recordKind})',
+      body:Column(
+        children: [
+          if (recordKindsState.isNotEmpty) ...[
+            DropdownButton<String>(
+              value: selectedRecordKind.value,
+              onChanged: (newValue) {
+                selectedRecordKind.value = newValue;
+              },
+              items: recordKindsState.map<DropdownMenuItem<String>>((RecordKind record) {
+                return DropdownMenuItem<String>(
+                  value: record.recordKind,
+                  child: Text(record.recordKind),
+                );
+              }).toList(),
             ),
-          );
-        },
-        separatorBuilder: (BuildContext context, int index) {
-          return Container(
-            height: 10,
-            color: Colors.orange,
-          );
-        },
+            Expanded(
+              child: ListView.separated(
+                itemCount: filteredRecords.length,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    title: Text('${filteredRecords[index].title}(${filteredRecords[index].recordKind})'),
+                  );
+                }, separatorBuilder: (BuildContext context, int index) {
+                return Container(
+                  height: 10,
+                  color: Colors.orange,
+                );
+              },
+              ),
+            ),
+          ]
+        ],
       ),
     );
   }

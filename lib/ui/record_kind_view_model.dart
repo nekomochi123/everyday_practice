@@ -9,7 +9,7 @@ part 'record_kind_view_model.freezed.dart';
 part 'record_kind_view_model.g.dart';
 
 final recordKindStateProvider = StateNotifierProvider.autoDispose<RecordKindStateNotifier, RecordKindState>((ref) =>
-    RecordKindStateNotifier(const RecordKindState(recordKinds: [], records: []), ref.read),
+    RecordKindStateNotifier(const RecordKindState(recordKinds: [], records: [], selectedRecordKind: ''), ref.read),
 );
 
 @freezed
@@ -17,6 +17,7 @@ class RecordKindState with _$RecordKindState {
   const factory RecordKindState({
     required List<RecordKind> recordKinds,
     required List<String> records,
+    required String selectedRecordKind,
   }) = _RecordKindState;
 
   factory RecordKindState.fromJson(Map<String, dynamic> json) => _$RecordKindStateFromJson(json);
@@ -27,9 +28,11 @@ class RecordKindStateNotifier extends ViewModel<RecordKindState> {
 
   Future<void> loadRecord() async {
     List<RecordKind> recordKindsValue = await loadRecordKinds();
-    print(recordKindsValue);
     List<String> recordsValue = recordKindsValue.map((recordKind) => recordKind.recordKind).toList();
-    print(recordsValue);
     state = state.copyWith(recordKinds: recordKindsValue, records: recordsValue);
+  }
+
+  void updateSelectedRecordKind(String newRecordKind) {
+    state = state.copyWith(selectedRecordKind: newRecordKind);
   }
 }
