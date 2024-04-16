@@ -8,8 +8,8 @@ import 'package:everyday_practice/foundation/utill/viewmodel.dart';
 part 'record_kind_view_model.freezed.dart';
 part 'record_kind_view_model.g.dart';
 
-final recordKindStateProvider = StateNotifierProvider.autoDispose<RecordKindStateNotifier, RecordKindState>((ref) =>
-    RecordKindStateNotifier(const RecordKindState(recordKinds: [], records: [], selectedRecordKind: ''), ref.read),
+final recordKindStateProvider = StateNotifierProvider.autoDispose<RecordKindStateNotifier, RecordKindState>(
+  (ref) => RecordKindStateNotifier(const RecordKindState(recordKinds: [], records: [], selectedRecordKind: ''), ref.read),
 );
 
 @freezed

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:everyday_practice/ui/record_kind_view_model.dart';
 
@@ -28,7 +27,7 @@ class RecordKindScreen extends HookConsumerWidget {
           'フィルタ付き一覧表示',
         ),
       ),
-      body:Column(
+      body: Column(
         children: [
           if (recordKindsState.isNotEmpty) ...[
             DropdownButton<String>(
@@ -50,12 +49,13 @@ class RecordKindScreen extends HookConsumerWidget {
                   return ListTile(
                     title: Text('${filteredRecords[index].title}(${filteredRecords[index].recordKind})'),
                   );
-                }, separatorBuilder: (BuildContext context, int index) {
-                return Container(
-                  height: 10,
-                  color: Colors.orange,
-                );
-              },
+                },
+                separatorBuilder: (BuildContext context, int index) {
+                  return Container(
+                    height: 10,
+                    color: Colors.orange,
+                  );
+                },
               ),
             ),
           ]

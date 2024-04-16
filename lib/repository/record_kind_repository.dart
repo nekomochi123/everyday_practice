@@ -7,4 +7,3 @@ Future<List<RecordKind>> loadRecordKinds() async {
   List<dynamic> json = jsonDecode(jsonString);
   return json.map((item) => RecordKind.fromJson(item)).toList();
 }
-

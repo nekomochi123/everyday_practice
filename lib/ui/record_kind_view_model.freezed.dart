@@ -26,25 +26,18 @@ mixin _$RecordKindState {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $RecordKindStateCopyWith<RecordKindState> get copyWith =>
-      throw _privateConstructorUsedError;
+  $RecordKindStateCopyWith<RecordKindState> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $RecordKindStateCopyWith<$Res> {
-  factory $RecordKindStateCopyWith(
-          RecordKindState value, $Res Function(RecordKindState) then) =
-      _$RecordKindStateCopyWithImpl<$Res, RecordKindState>;
+  factory $RecordKindStateCopyWith(RecordKindState value, $Res Function(RecordKindState) then) = _$RecordKindStateCopyWithImpl<$Res, RecordKindState>;
   @useResult
-  $Res call(
-      {List<RecordKind> recordKinds,
-      List<String> records,
-      String selectedRecordKind});
+  $Res call({List<RecordKind> recordKinds, List<String> records, String selectedRecordKind});
 }
 
 /// @nodoc
-class _$RecordKindStateCopyWithImpl<$Res, $Val extends RecordKindState>
-    implements $RecordKindStateCopyWith<$Res> {
+class _$RecordKindStateCopyWithImpl<$Res, $Val extends RecordKindState> implements $RecordKindStateCopyWith<$Res> {
   _$RecordKindStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -77,26 +70,16 @@ class _$RecordKindStateCopyWithImpl<$Res, $Val extends RecordKindState>
 }
 
 /// @nodoc
-abstract class _$$RecordKindStateImplCopyWith<$Res>
-    implements $RecordKindStateCopyWith<$Res> {
-  factory _$$RecordKindStateImplCopyWith(_$RecordKindStateImpl value,
-          $Res Function(_$RecordKindStateImpl) then) =
-      __$$RecordKindStateImplCopyWithImpl<$Res>;
+abstract class _$$RecordKindStateImplCopyWith<$Res> implements $RecordKindStateCopyWith<$Res> {
+  factory _$$RecordKindStateImplCopyWith(_$RecordKindStateImpl value, $Res Function(_$RecordKindStateImpl) then) = __$$RecordKindStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {List<RecordKind> recordKinds,
-      List<String> records,
-      String selectedRecordKind});
+  $Res call({List<RecordKind> recordKinds, List<String> records, String selectedRecordKind});
 }
 
 /// @nodoc
-class __$$RecordKindStateImplCopyWithImpl<$Res>
-    extends _$RecordKindStateCopyWithImpl<$Res, _$RecordKindStateImpl>
-    implements _$$RecordKindStateImplCopyWith<$Res> {
-  __$$RecordKindStateImplCopyWithImpl(
-      _$RecordKindStateImpl _value, $Res Function(_$RecordKindStateImpl) _then)
-      : super(_value, _then);
+class __$$RecordKindStateImplCopyWithImpl<$Res> extends _$RecordKindStateCopyWithImpl<$Res, _$RecordKindStateImpl> implements _$$RecordKindStateImplCopyWith<$Res> {
+  __$$RecordKindStateImplCopyWithImpl(_$RecordKindStateImpl _value, $Res Function(_$RecordKindStateImpl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -124,18 +107,12 @@ class __$$RecordKindStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$RecordKindStateImpl
-    with DiagnosticableTreeMixin
-    implements _RecordKindState {
-  const _$RecordKindStateImpl(
-      {required final List<RecordKind> recordKinds,
-      required final List<String> records,
-      required this.selectedRecordKind})
+class _$RecordKindStateImpl with DiagnosticableTreeMixin implements _RecordKindState {
+  const _$RecordKindStateImpl({required final List<RecordKind> recordKinds, required final List<String> records, required this.selectedRecordKind})
       : _recordKinds = recordKinds,
         _records = records;
 
-  factory _$RecordKindStateImpl.fromJson(Map<String, dynamic> json) =>
-      _$$RecordKindStateImplFromJson(json);
+  factory _$RecordKindStateImpl.fromJson(Map<String, dynamic> json) => _$$RecordKindStateImplFromJson(json);
 
   final List<RecordKind> _recordKinds;
   @override
@@ -176,27 +153,19 @@ class _$RecordKindStateImpl
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RecordKindStateImpl &&
-            const DeepCollectionEquality()
-                .equals(other._recordKinds, _recordKinds) &&
+            const DeepCollectionEquality().equals(other._recordKinds, _recordKinds) &&
             const DeepCollectionEquality().equals(other._records, _records) &&
-            (identical(other.selectedRecordKind, selectedRecordKind) ||
-                other.selectedRecordKind == selectedRecordKind));
+            (identical(other.selectedRecordKind, selectedRecordKind) || other.selectedRecordKind == selectedRecordKind));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_recordKinds),
-      const DeepCollectionEquality().hash(_records),
-      selectedRecordKind);
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_recordKinds), const DeepCollectionEquality().hash(_records), selectedRecordKind);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$RecordKindStateImplCopyWith<_$RecordKindStateImpl> get copyWith =>
-      __$$RecordKindStateImplCopyWithImpl<_$RecordKindStateImpl>(
-          this, _$identity);
+  _$$RecordKindStateImplCopyWith<_$RecordKindStateImpl> get copyWith => __$$RecordKindStateImplCopyWithImpl<_$RecordKindStateImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -207,13 +176,9 @@ class _$RecordKindStateImpl
 }
 
 abstract class _RecordKindState implements RecordKindState {
-  const factory _RecordKindState(
-      {required final List<RecordKind> recordKinds,
-      required final List<String> records,
-      required final String selectedRecordKind}) = _$RecordKindStateImpl;
+  const factory _RecordKindState({required final List<RecordKind> recordKinds, required final List<String> records, required final String selectedRecordKind}) = _$RecordKindStateImpl;
 
-  factory _RecordKindState.fromJson(Map<String, dynamic> json) =
-      _$RecordKindStateImpl.fromJson;
+  factory _RecordKindState.fromJson(Map<String, dynamic> json) = _$RecordKindStateImpl.fromJson;
 
   @override
   List<RecordKind> get recordKinds;
@@ -223,6 +188,5 @@ abstract class _RecordKindState implements RecordKindState {
   String get selectedRecordKind;
   @override
   @JsonKey(ignore: true)
-  _$$RecordKindStateImplCopyWith<_$RecordKindStateImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$RecordKindStateImplCopyWith<_$RecordKindStateImpl> get copyWith => throw _privateConstructorUsedError;
 }

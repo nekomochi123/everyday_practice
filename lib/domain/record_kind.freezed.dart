@@ -25,22 +25,18 @@ mixin _$RecordKind {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $RecordKindCopyWith<RecordKind> get copyWith =>
-      throw _privateConstructorUsedError;
+  $RecordKindCopyWith<RecordKind> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $RecordKindCopyWith<$Res> {
-  factory $RecordKindCopyWith(
-          RecordKind value, $Res Function(RecordKind) then) =
-      _$RecordKindCopyWithImpl<$Res, RecordKind>;
+  factory $RecordKindCopyWith(RecordKind value, $Res Function(RecordKind) then) = _$RecordKindCopyWithImpl<$Res, RecordKind>;
   @useResult
   $Res call({String title, String recordKind});
 }
 
 /// @nodoc
-class _$RecordKindCopyWithImpl<$Res, $Val extends RecordKind>
-    implements $RecordKindCopyWith<$Res> {
+class _$RecordKindCopyWithImpl<$Res, $Val extends RecordKind> implements $RecordKindCopyWith<$Res> {
   _$RecordKindCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -68,23 +64,16 @@ class _$RecordKindCopyWithImpl<$Res, $Val extends RecordKind>
 }
 
 /// @nodoc
-abstract class _$$RecordKindImplCopyWith<$Res>
-    implements $RecordKindCopyWith<$Res> {
-  factory _$$RecordKindImplCopyWith(
-          _$RecordKindImpl value, $Res Function(_$RecordKindImpl) then) =
-      __$$RecordKindImplCopyWithImpl<$Res>;
+abstract class _$$RecordKindImplCopyWith<$Res> implements $RecordKindCopyWith<$Res> {
+  factory _$$RecordKindImplCopyWith(_$RecordKindImpl value, $Res Function(_$RecordKindImpl) then) = __$$RecordKindImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String title, String recordKind});
 }
 
 /// @nodoc
-class __$$RecordKindImplCopyWithImpl<$Res>
-    extends _$RecordKindCopyWithImpl<$Res, _$RecordKindImpl>
-    implements _$$RecordKindImplCopyWith<$Res> {
-  __$$RecordKindImplCopyWithImpl(
-      _$RecordKindImpl _value, $Res Function(_$RecordKindImpl) _then)
-      : super(_value, _then);
+class __$$RecordKindImplCopyWithImpl<$Res> extends _$RecordKindCopyWithImpl<$Res, _$RecordKindImpl> implements _$$RecordKindImplCopyWith<$Res> {
+  __$$RecordKindImplCopyWithImpl(_$RecordKindImpl _value, $Res Function(_$RecordKindImpl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -110,8 +99,7 @@ class __$$RecordKindImplCopyWithImpl<$Res>
 class _$RecordKindImpl with DiagnosticableTreeMixin implements _RecordKind {
   const _$RecordKindImpl({required this.title, required this.recordKind});
 
-  factory _$RecordKindImpl.fromJson(Map<String, dynamic> json) =>
-      _$$RecordKindImplFromJson(json);
+  factory _$RecordKindImpl.fromJson(Map<String, dynamic> json) => _$$RecordKindImplFromJson(json);
 
   @override
   final String title;
@@ -138,8 +126,7 @@ class _$RecordKindImpl with DiagnosticableTreeMixin implements _RecordKind {
         (other.runtimeType == runtimeType &&
             other is _$RecordKindImpl &&
             (identical(other.title, title) || other.title == title) &&
-            (identical(other.recordKind, recordKind) ||
-                other.recordKind == recordKind));
+            (identical(other.recordKind, recordKind) || other.recordKind == recordKind));
   }
 
   @JsonKey(ignore: true)
@@ -149,8 +136,7 @@ class _$RecordKindImpl with DiagnosticableTreeMixin implements _RecordKind {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$RecordKindImplCopyWith<_$RecordKindImpl> get copyWith =>
-      __$$RecordKindImplCopyWithImpl<_$RecordKindImpl>(this, _$identity);
+  _$$RecordKindImplCopyWith<_$RecordKindImpl> get copyWith => __$$RecordKindImplCopyWithImpl<_$RecordKindImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -161,12 +147,9 @@ class _$RecordKindImpl with DiagnosticableTreeMixin implements _RecordKind {
 }
 
 abstract class _RecordKind implements RecordKind {
-  const factory _RecordKind(
-      {required final String title,
-      required final String recordKind}) = _$RecordKindImpl;
+  const factory _RecordKind({required final String title, required final String recordKind}) = _$RecordKindImpl;
 
-  factory _RecordKind.fromJson(Map<String, dynamic> json) =
-      _$RecordKindImpl.fromJson;
+  factory _RecordKind.fromJson(Map<String, dynamic> json) = _$RecordKindImpl.fromJson;
 
   @override
   String get title;
@@ -174,6 +157,5 @@ abstract class _RecordKind implements RecordKind {
   String get recordKind;
   @override
   @JsonKey(ignore: true)
-  _$$RecordKindImplCopyWith<_$RecordKindImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$RecordKindImplCopyWith<_$RecordKindImpl> get copyWith => throw _privateConstructorUsedError;
 }
