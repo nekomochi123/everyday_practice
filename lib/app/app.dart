@@ -19,7 +19,7 @@ class MyApp extends HookConsumerWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      supportedLocales: const[
+      supportedLocales: const [
         Locale('ja', ''),
         Locale('en', ''),
       ],
@@ -27,7 +27,7 @@ class MyApp extends HookConsumerWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      builder: (context, child){
+      builder: (context, child) {
         return Stack(
           children: [
             child ?? const SizedBox.shrink(),
