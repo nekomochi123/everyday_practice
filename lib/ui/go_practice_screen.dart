@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class HomeScreen extends HookConsumerWidget {
-  const HomeScreen({
+class GoPracticeScreen extends HookConsumerWidget {
+  const GoPracticeScreen({
     super.key,
   });
 
@@ -14,7 +14,7 @@ class HomeScreen extends HookConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'QRコードリーダー',
+          'api取得',
         ),
       ),
       body: null
