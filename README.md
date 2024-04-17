@@ -11,5 +11,5 @@
 - 1つ目の画面(表示画面)
     - データの全てがリストで縦に並べられている
     - データはtitleとrecordKindを持つ
-    - recordKindは「うんち, おしっこ, ゲロ, 下痢」
+    - recordKindは「にんじん, りんご, すぺありぶ, やんやんつけぼー」
     - drop down buttonでrecordKindを選択でき、選択したrecordKindでリスト表示のフィルタリングを行う
