@@ -20,9 +20,9 @@ GoPracticeRepository _$GoPracticeRepositoryFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GoPracticeRepository {
-  int get id => throw _privateConstructorUsedError;
-  String get title => throw _privateConstructorUsedError;
-  String get kind => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
+  int? get kind => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -36,7 +36,7 @@ abstract class $GoPracticeRepositoryCopyWith<$Res> {
           $Res Function(GoPracticeRepository) then) =
       _$GoPracticeRepositoryCopyWithImpl<$Res, GoPracticeRepository>;
   @useResult
-  $Res call({int id, String title, String kind});
+  $Res call({int? id, String? title, int? kind});
 }
 
 /// @nodoc
@@ -53,23 +53,23 @@ class _$GoPracticeRepositoryCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? title = null,
-    Object? kind = null,
+    Object? id = freezed,
+    Object? title = freezed,
+    Object? kind = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      title: null == title
+              as int?,
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      kind: null == kind
+              as String?,
+      kind: freezed == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int?,
     ) as $Val);
   }
 }
@@ -82,7 +82,7 @@ abstract class _$$GoPracticeRepositoryImplCopyWith<$Res>
       __$$GoPracticeRepositoryImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id, String title, String kind});
+  $Res call({int? id, String? title, int? kind});
 }
 
 /// @nodoc
@@ -96,23 +96,23 @@ class __$$GoPracticeRepositoryImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? title = null,
-    Object? kind = null,
+    Object? id = freezed,
+    Object? title = freezed,
+    Object? kind = freezed,
   }) {
     return _then(_$GoPracticeRepositoryImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      title: null == title
+              as int?,
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      kind: null == kind
+              as String?,
+      kind: freezed == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int?,
     ));
   }
 }
@@ -121,17 +121,20 @@ class __$$GoPracticeRepositoryImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$GoPracticeRepositoryImpl implements _GoPracticeRepository {
   const _$GoPracticeRepositoryImpl(
-      {required this.id, required this.title, required this.kind});
+      {this.id = 0, this.title = '', this.kind = 0});
 
   factory _$GoPracticeRepositoryImpl.fromJson(Map<String, dynamic> json) =>
       _$$GoPracticeRepositoryImplFromJson(json);
 
   @override
-  final int id;
+  @JsonKey()
+  final int? id;
   @override
-  final String title;
+  @JsonKey()
+  final String? title;
   @override
-  final String kind;
+  @JsonKey()
+  final int? kind;
 
   @override
   String toString() {
@@ -170,19 +173,19 @@ class _$GoPracticeRepositoryImpl implements _GoPracticeRepository {
 
 abstract class _GoPracticeRepository implements GoPracticeRepository {
   const factory _GoPracticeRepository(
-      {required final int id,
-      required final String title,
-      required final String kind}) = _$GoPracticeRepositoryImpl;
+      {final int? id,
+      final String? title,
+      final int? kind}) = _$GoPracticeRepositoryImpl;
 
   factory _GoPracticeRepository.fromJson(Map<String, dynamic> json) =
       _$GoPracticeRepositoryImpl.fromJson;
 
   @override
-  int get id;
+  int? get id;
   @override
-  String get title;
+  String? get title;
   @override
-  String get kind;
+  int? get kind;
   @override
   @JsonKey(ignore: true)
   _$$GoPracticeRepositoryImplCopyWith<_$GoPracticeRepositoryImpl>

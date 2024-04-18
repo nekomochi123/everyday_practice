@@ -9,9 +9,9 @@ part of 'go_practice_repository.dart';
 _$GoPracticeRepositoryImpl _$$GoPracticeRepositoryImplFromJson(
         Map<String, dynamic> json) =>
     _$GoPracticeRepositoryImpl(
-      id: json['id'] as int,
-      title: json['title'] as String,
-      kind: json['kind'] as String,
+      id: json['id'] as int? ?? 0,
+      title: json['title'] as String? ?? '',
+      kind: json['kind'] as int? ?? 0,
     );
 
 Map<String, dynamic> _$$GoPracticeRepositoryImplToJson(
