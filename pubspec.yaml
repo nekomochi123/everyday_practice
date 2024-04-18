@@ -18,6 +18,7 @@ dependencies:
   cupertino_icons:
   flutter_localizations:
     sdk: flutter
+  http:
 
 dev_dependencies:
   build_runner:
