@@ -16,6 +16,7 @@ dependencies:
   gap:
   hooks_riverpod:
   cupertino_icons:
+  http:
   flutter_localizations:
     sdk: flutter
 
